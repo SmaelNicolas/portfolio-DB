@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
-import { SectionOnScreenContext } from "../../../Context/sectionOnScreen";
 
 function ContactButton({ close }) {
-	const { toggleContact } = useContext(SectionOnScreenContext);
-
 	return (
 		<ButtonStyled
 			onClick={() => {

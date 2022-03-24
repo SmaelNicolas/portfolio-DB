@@ -33,6 +33,9 @@ function Home() {
 export default Home;
 const ContainerHome = styled.div`
 	max-width: 1045px;
+	@media screen and (max-width: 1080px) {
+		width: 100%;
+	}
 `;
 const ContentContainer = styled.div`
 	display: flex;
@@ -63,6 +66,7 @@ const HomeContainer = styled.div`
 	flex-wrap: wrap;
 	opacity: 0;
 	animation: ${Fade} 1.5s forwards;
+
 	@media screen and (max-width: 1080px) {
 		margin-bottom: 100px;
 	}
@@ -76,11 +80,12 @@ const HomeContainer = styled.div`
 `;
 
 const TextContent = styled.div`
-display flex: flex;
-margin-top: 2rem;
-@media screen and (max-width: 1080px) {
-	
-}
-@media screen and (min-width: 500px) {
-}
+	display: flex;
+	height: auto;
+	flex-direction: column;
+	padding: 20px 0px;
+	@media screen and (max-width: 800px) {
+		width: 80%;
+		textalign: center;
+	}
 `;

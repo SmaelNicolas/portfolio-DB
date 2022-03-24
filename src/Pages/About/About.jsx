@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Me from "./Me/Me";
-import Work from "./Work/Work";
 import Skills from "./Skills/Skills";
 import styled, { keyframes } from "styled-components";
 import handleWheel from "../../Helpers/mouseWheelPages";
@@ -30,15 +29,22 @@ const Fade = keyframes`
 `;
 
 const AboutContainer = styled.div`
-	width: 100%;
+	width: 70%;
 	min-height: 60vh;
-	max-width: 1045px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
+	gap: 50px;
 	opacity: 0;
 	animation: ${Fade} 1.5s forwards;
-	padding-top: 2rem;
+	margin-top: 15px;
+	@media screen and (max-width: 800px) {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
 `;

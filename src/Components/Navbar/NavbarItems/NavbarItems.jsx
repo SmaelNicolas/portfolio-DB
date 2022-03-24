@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { SectionOnScreenContext } from "../../../Context/sectionOnScreen";
-import DanielBarrera from "../../../Assets/DanielBarrera.pdf";
+import resume from "../../../Assets/DanielBarrera.pdf";
 
 function NavbarItems() {
 	const {
@@ -14,7 +14,6 @@ function NavbarItems() {
 		toggleSoftware,
 		togglePetroleum,
 		toggleContact,
-		toggleResume,
 	} = useContext(SectionOnScreenContext);
 	return (
 		<Ul>
@@ -30,11 +29,7 @@ function NavbarItems() {
 			<Li onClick={togglePetroleum} border={petroleum}>
 				<ALink>Petroleum Engineering_</ALink>
 			</Li>
-			<ButtonResume
-				bgColor='transparent'
-				onClick={toggleResume}
-				//  href={DanielBarrera} download
-			>
+			<ButtonResume bgColor='transparent' href={resume} download>
 				Resume
 			</ButtonResume>
 			<Buttons border='none' color='white' onClick={toggleContact}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import { SectionOnScreenContext } from "../../Context/sectionOnScreen";
 import Icons from "./Icons/Icons";

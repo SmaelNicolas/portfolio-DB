@@ -1,50 +1,61 @@
 import React from "react";
-import styled from "styled-components"
-import IconJava from "../../../../Assets/java.svg"
-import IconPy from "../../../../Assets/phyton.svg"
-import IconGi from "../../../../Assets/github2.svg"
-import IconSq from "../../../../Assets/sql.svg"
-import IconJu from "../../../../Assets/jupyter.svg"
-import IconGo from "../../../../Assets/googleCloud.svg"
-import IconMa from "../../../../Assets/maven.svg"
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
+import styled from "styled-components";
+import IconJava from "../../../../Assets/java.svg";
+import IconPy from "../../../../Assets/phyton.svg";
+import IconGi from "../../../../Assets/github2.svg";
+import IconSq from "../../../../Assets/sql.svg";
+import IconJu from "../../../../Assets/jupyter.svg";
+import IconGo from "../../../../Assets/googleCloud.svg";
+import IconMa from "../../../../Assets/maven.svg";
 
 function Icons() {
-	return ( <ContainerIcons> 
-				<ImgIcon src={IconJava}/>
-				<ImgIcon src={IconPy}/>
-				<ImgIcon src={IconGi}/>
-				<ImgIcon src={IconSq}/>
-				<ImgIcon src={IconJu}/>
-				<ImgIcon src={IconGo}/>
-				<ImgIcon src={IconMa}/>
-			</ContainerIcons>);
+	return (
+		<>
+			<Swiper
+				slidesPerView={4}
+				spaceBetween={30}
+				navigation={true}
+				modules={[Navigation]}
+				className='mySwiper'
+			>
+				<SwiperSlide>
+					<ImgIcon src={IconJava} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconPy} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconGi} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconSq} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconJu} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconGo} />
+				</SwiperSlide>
+				<SwiperSlide>
+					<ImgIcon src={IconMa} />
+				</SwiperSlide>
+			</Swiper>
+		</>
+	);
 }
 const ImgIcon = styled.img`
-object-fit: contain;
-width: 100%;
-max-height: 100px;
-transition:transform 450ms;
-@media screen and (max-width: 1080px) {
-	
-}
-@media screen and (max-width: 500px) {
-	
- 
-`
-const ContainerIcons =styled.div`
-display:flex;
-gap:80px;
+	width: 100px;
+	margin: 0 auto;
+	@media screen and (max-width: 500px) {
+		width: 50px;
+	}
+`;
 
-
-@media screen and (max-width: 1080px) {
-	gap:36px;
-
-
-}
-@media screen and (max-width: 500px) {
-	overflow-y: hidden;
-	overflow-x:scroll;
-`
 export default Icons;

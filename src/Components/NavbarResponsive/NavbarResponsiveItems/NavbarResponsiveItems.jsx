@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import resume from "../../../Assets/DanielBarrera.pdf";
 
 function NavbarResponsiveItems({ toggleShow }) {
 	return (
@@ -39,7 +40,8 @@ function NavbarResponsiveItems({ toggleShow }) {
 				onClick={() => {
 					toggleShow();
 				}}
-				href='#resume'
+				href={resume}
+				download
 			>
 				Resume
 			</ButtonLink>
@@ -142,8 +144,4 @@ const ButtonLink = styled(ALink)`
 	cursor: pointer;
 	align-self: center;
 	text-align: center;
-`;
-
-const SmallLink = styled(ALink)`
-	font-size: 16px;
 `;

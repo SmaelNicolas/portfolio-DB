@@ -7,10 +7,9 @@ import PetroleumEngineering from "./PetroleumEngineering/PetroleumEngineering";
 import SoftwareTesting from "./SoftwareTesting/SoftwareTesting";
 import { SectionOnScreenContext } from "../Context/sectionOnScreen";
 import IconsMedia from "../Components/IconsMedia/IconsMedia";
-import ResumeBook from "../Components/ResumeBook/ResumeBook";
 
 function Pages() {
-	const { home, about, software, petroleum, resume, contact } = useContext(
+	const { home, about, software, petroleum, contact } = useContext(
 		SectionOnScreenContext
 	);
 
@@ -23,14 +22,12 @@ function Pages() {
 				{software && <SoftwareTesting />}
 				{petroleum && <PetroleumEngineering />}
 				{contact && <ContactMe />}
-				{resume && <ResumeBook />}
 			</PagesContainer>
 			<PagesContainerMobile>
 				<Home />
 				<About />
 				<SoftwareTesting />
 				<PetroleumEngineering />
-				<ResumeBook />
 				<ContactMe />
 			</PagesContainerMobile>
 		</>
